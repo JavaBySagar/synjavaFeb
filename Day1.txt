@@ -1,3 +1,23 @@
+Lab 6- Provide lambda expressions for following.
+	int sqr(int) -> 
+	int add(int , int)
+	double divide(int, int)
+	String add (string String)
+	Double divide(String, String)
+	boolean check(String, String) -> equal
+	int bigger(int, int)
+	int biggerString(string,string)
+
+
+	public static void main(String[] args) {
+		UnaryOperator<Integer> sqr = (i)->i*i;
+		System.out.println("SQR of 10 is " + sqr.apply(10));
+		BinaryOperator<Integer> add = (i,j)->i+j;
+		System.out.println("Add with 200 and 300 is" + add.apply(200, 300));
+	}
+
+
+
 Lab 5 - public class Dept {
 	private int deptno;
 	private String dname;
