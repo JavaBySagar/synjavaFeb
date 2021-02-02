@@ -1,3 +1,44 @@
+Lab 5 - public class Dept {
+	private int deptno;
+	private String dname;
+	private String loc; 
+	
+	get/set + toString
+       }
+       
+       public class Emp {
+	private int empno;
+	private String ename;
+	private double salary;
+	get/set + toString
+       }
+
+	Write Code for DeptManager  ( removeif, foreach)
+		public class DeptManager{
+	private List<Dept> list = new ArrayList<>();
+
+	 public void insert(Dept t) {
+			list.add(t);
+		}
+
+	 public void delete(Dept d){
+		 // delete that department
+	 }
+
+		public void update(Dept t) {
+			// modify current deptno details with new details
+		}
+
+		public List<Dept> list() {
+			//list of all the departments
+			return list;
+		}
+
+	}
+
+
+
+
 Lab 4 - Write one interface -> with method m1, m2, m3
 	Write two implementation classes and  a main class to invoke these methods.
 	Modify m2 from interface to make it default with some code. 
