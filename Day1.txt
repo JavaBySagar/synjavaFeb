@@ -1,3 +1,13 @@
+Lab 4 - Write one interface -> with method m1, m2, m3
+	Write two implementation classes and  a main class to invoke these methods.
+	Modify m2 from interface to make it default with some code. 
+	Run -> Check, no impact of default
+	Modify one implementation class to delete m2 definition and check (see default of interface)
+
+	Same way modify m3 as static and see impact
+	watch errors and rectify
+
+
 Lab3 - Convert following code to lambda 
 	package old;
 
