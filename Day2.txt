@@ -1,0 +1,15 @@
+Lab 1 - 		List<String> list = new ArrayList<>();
+		list.add("a"); list.add("bb");list.add("ccc");list.add("dddd");
+		list.stream().filter(x->x.length() >2).forEach(System.out::println);
+		
+		Optional<String> optionalstring = list.stream().filter(x->x.length() >4).findFirst();
+		if (optionalstring.isPresent())
+				System.out.println("First Element - " + optionalstring.get());
+		else
+				System.out.println("No element found");
+
+  Write a Lab3.java to create 10 elements list for Emp Object ( empno, ename, salary)
+    1. Filter all records where salary > somenumber
+    2. Show a record is empno is matching (Filter,Findfirst)
+    3. Show records where salary is between .. and ..
+    4. Show all employee where ename length is 5 characters
