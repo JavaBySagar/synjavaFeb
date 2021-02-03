@@ -1,3 +1,9 @@
+Lab 5 - For emp create 50000 records
+	list.stream().filter((e)->e.getEname().startsWith("V")).forEach( e-> System.out.print(e.getEmpno()+" - " +e.getEname() +","));
+	list.parallelStream().filter((e)->e.getEname().startsWith("V")).forEach( e-> System.out.print(e.getEmpno()+" - " +e.getEname() +","));
+	Check threads using jvisualvm
+	
+		
 Lab 4 - 	Stream<Integer> strint = Stream.of(104,300,400,300,104,155);
 		List<String> list = new ArrayList<>();
 		list.add("a"); list.add("bb");list.add("ccc");list.add("ddd");
