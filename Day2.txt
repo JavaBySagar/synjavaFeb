@@ -1,3 +1,7 @@
+Lab 3 - 
+	SHow sum of all employees salary. (first call map and then reduce)
+	Show max of salary
+	
 Lab 2 - 	//list.stream().skip(5).limit(10).forEach(System.out::println);
 	Create code for pagenation, show first 10 records and show P/N option, accept it from user and print data accordingly
 
