@@ -1,3 +1,39 @@
+Lab 7 - Map vs FlatMap
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Lab2 {
+
+	public static void main(String[] args) {
+		List<String> list1 = new ArrayList<>();
+		list1.add("aa"); list1.add("bb");
+		
+		List<String> list2 = new ArrayList<>();
+		list2.add("cc"); list2.add("dd");
+		
+		List<String> list3 = new ArrayList<>();
+		list3.add("ee"); list3.add("ff");
+		
+		List<List<String>> list = new ArrayList<>();
+		list.add(list1); list.add(list2); list.add(list3);
+		
+		System.out.println(list);
+		
+		list.stream().map(l->l.get(0)).forEach(System.out::println);
+		//Returns a stream consisting of the results of applying the given function to the elements of this stream.
+		
+		System.out.println("after flatmap");
+		list.stream().flatMap(fm->fm.stream()).forEach(System.out::println);
+		//Returns a stream consisting of the results of replacing each element of this stream 
+		//with the contents of a mapped stream produced by applying the provided 
+		//mapping function to each element. Each mapped stream is closed after its contents have been placed into this stream. (If a mapped stream is null an empty stream is used, instead.)
+			
+	}
+
+}
+
+
 Lab 6 - Create a class 
 	public class Emp {
 		private int empno;
