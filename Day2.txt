@@ -1,3 +1,55 @@
+Lab 6 - Create a class 
+	public class Emp {
+		private int empno;
+		private String ename;
+		private double salary;
+		private String dept; + get/set + toString}
+	
+	class EmpMgr {
+	public static List<Emp> createemp() {
+		List<Emp> list = new ArrayList<Emp>();
+		List<String> names = Stream.of("Simran", "Saloni", "Asha", "Vaishali", "Lili").collect(Collectors.toList());
+		List<String> departments = Stream.of("HR", "TRN", "TA", "FIN").collect(Collectors.toList());
+
+		for (int i = 0; i < 50; i++) {
+			Emp e1 = new Emp();
+			e1.setEmpno(i + 1);
+			e1.setEname(names.get(i % names.size()));
+			e1.setDept(departments.get(i % departments.size()));
+			e1.setSalary((int) (Math.random() * 1000));
+			list.add(e1);
+		}
+		return list;
+		}
+	}
+
+	public class Lab1 {
+
+		public static void main(String[] args) {
+			List<Emp> list = EmpMgr.createemp();
+
+			  Stream<Emp> original = list.stream(); 
+			  Stream<Emp> empstr = 	  original.filter((e)->e.getDept().equals("HR"));
+			  empstr.forEach(System.out::println);
+
+			  double sumforhr = list.stream().filter((e)->e.getDept().equals("HR")).mapToDouble((e)->e.getSalary()).sum();
+			  System.out.println("sumfor HR = " + sumforhr);
+			  double sumforfin = list.stream().filter((e)->e.getDept().equals("FIN")).mapToDouble((e)->e.getSalary()).sum();
+			  System.out.println("sumfor FIN = " + sumforfin);
+
+			  // Compute sum of salaries by department
+			    Map<String, Double> totalByDept
+				 = list.stream()
+					    .collect(Collectors.groupingBy(Emp::getDept,
+									   Collectors.summingDouble(Emp::getSalary)));
+			    System.out.println(totalByDept);
+
+		}
+	}
+	
+	Modify to create a map of list of employees in each department and also show count of employees
+	
+	
 Lab 5 - For emp create 50000 records
 	list.stream().filter((e)->e.getEname().startsWith("V")).forEach( e-> System.out.print(e.getEmpno()+" - " +e.getEname() +","));
 	list.parallelStream().filter((e)->e.getEname().startsWith("V")).forEach( e-> System.out.print(e.getEmpno()+" - " +e.getEname() +","));
