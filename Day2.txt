@@ -1,3 +1,6 @@
+Lab 2 - 	//list.stream().skip(5).limit(10).forEach(System.out::println);
+	Create code for pagenation, show first 10 records and show P/N option, accept it from user and print data accordingly
+
 Lab 1 - 		List<String> list = new ArrayList<>();
 		list.add("a"); list.add("bb");list.add("ccc");list.add("dddd");
 		list.stream().filter(x->x.length() >2).forEach(System.out::println);
